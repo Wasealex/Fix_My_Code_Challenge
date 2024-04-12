@@ -1,40 +1,28 @@
 #!/usr/bin/python3
-"""module that contains one class square"""
 
+class square():
+    
+    width = 0
+    height = 0
 
-class Square:
-    def __init__(self, width=0):
-        """initializing square"""
-        self._width = width
+    
+    def __init__(self, *args, **kwargs):
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
-    @property
-    def width(self):
-        """property"""
-        return self._width
+    def area_of_my_square(self):
+        """ Area of the square """
+        return self.width * self.width
 
-    @width.setter
-    def width(self, value):
-        """accurate value"""
-        if value >= 0:
-            self._width = value
-        else:
-            raise ValueError("Width cannot be negative.")
-
-    def calculate_area(self):
-        """area of square"""
-        return self._width ** 2
-
-    def calculate_perimeter(self):
-        """perimeter"""
-        return self._width * 4
+    def PermiterOfMySquare(self):
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """string represtnation"""
-        return f"{self._width}/{self._width}"
-
+        return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
-    s = Square(width=12)
+
+    s = square(width=12, height=9)
     print(s)
-    print(s.calculate_area())
-    print(s.calculate_perimeter())
+    print(s.area_of_my_square())
+    print(s.PermiterOfMySquare())
