@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """documented for square
 """
+
+
 class square():
     """class square involving height
     """
@@ -21,6 +23,7 @@ class square():
 
     def __str__(self):
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
 
