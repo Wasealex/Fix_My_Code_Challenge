@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-
+"""documented for square
+"""
 class square():
-    
+    """class square involving height
+    """
     width = 0
     height = 0
 
-    
     def __init__(self, *args, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
@@ -15,7 +16,7 @@ class square():
         return self.width * self.width
 
     def PermiterOfMySquare(self):
-        self.width = self.height
+        self.height = self.width
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
