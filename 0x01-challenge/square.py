@@ -3,7 +3,7 @@
 """
 
 
-class square():
+class square:
     """class square involving height
     """
     width = 0
